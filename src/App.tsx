@@ -1,48 +1,44 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Slide1, Slide2, Slide3, Slide4, Slide5 } from './slides/Part1';
 import { Slide6, Slide7, Slide8, Slide9, Slide10 } from './slides/Part2';
 
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [showSlideNumber, setShowSlideNumber] = useState(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const visualScale = 1.5;
 
-  const slides = [
-    Slide1,
-    Slide2,
-    Slide3,
-    Slide4,
-    Slide5,
-    Slide6,
-    Slide7,
-    Slide8,
-    Slide9,
-    Slide10
-  ];
-
-  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const slideHeight = window.innerHeight;
-    const scrollTop = e.currentTarget.scrollTop;
-    const index = Math.round(scrollTop / slideHeight);
-    setActiveSlide(index);
-  };
+  const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8, Slide9, Slide10];
 
   const scrollToSlide = (index: number) => {
-    const element = document.getElementById(`slide-${index}`);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    const container = containerRef.current;
+    if (!container) return;
+
+    const clampedIndex = Math.max(0, Math.min(index, slides.length - 1));
+    container.scrollTo({
+      top: clampedIndex * container.clientHeight,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const slideHeight = e.currentTarget.clientHeight;
+    const scrollTop = e.currentTarget.scrollTop;
+    const index = Math.round(scrollTop / slideHeight);
+    const clampedIndex = Math.max(0, Math.min(index, slides.length - 1));
+    setActiveSlide(clampedIndex);
   };
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
-      if (['ArrowDown', 'PageDown', ' '].includes(event.key)) {
+      if (['ArrowDown', 'PageDown', ' ', 'Spacebar'].includes(event.key) || event.code === 'Space') {
         event.preventDefault();
-        scrollToSlide(Math.min(activeSlide + 1, slides.length - 1));
+        scrollToSlide(activeSlide + 1);
       }
 
       if (['ArrowUp', 'PageUp'].includes(event.key)) {
         event.preventDefault();
-        scrollToSlide(Math.max(activeSlide - 1, 0));
+        scrollToSlide(activeSlide - 1);
       }
 
       if (event.key === 'Home') {
@@ -64,6 +60,11 @@ function App() {
           scrollToSlide(targetIndex);
         }
       }
+
+      if (event.key.toLowerCase() === 'u') {
+        event.preventDefault();
+        setShowSlideNumber((prev) => !prev);
+      }
     };
 
     window.addEventListener('keydown', onKeyDown);
@@ -73,11 +74,12 @@ function App() {
   return (
     <div className="h-screen w-screen overflow-hidden">
       <div
+        ref={containerRef}
         className="presentation-scroll h-full w-full overflow-y-scroll snap-y snap-mandatory relative"
         onScroll={handleScroll}
         style={{
           transform: `scale(${visualScale})`,
-          transformOrigin: "top left",
+          transformOrigin: 'top left',
           width: `${100 / visualScale}%`,
           height: `${100 / visualScale}%`
         }}
@@ -89,10 +91,23 @@ function App() {
         </div>
 
         {slides.map((SlideComponent, idx) => (
-          <section key={idx} id={`slide-${idx}`} className="h-full w-full snap-start relative overflow-hidden">
+          <section
+            key={idx}
+            id={`slide-${idx}`}
+            className="h-full w-full snap-start relative overflow-hidden"
+            onClick={() => scrollToSlide(activeSlide + 1)}
+          >
             <SlideComponent />
           </section>
         ))}
+
+        <div
+          className={`fixed right-4 bottom-3 z-30 pointer-events-none select-none text-xs tracking-[0.12em] transition-opacity ${
+            showSlideNumber ? 'opacity-35 text-white' : 'opacity-0'
+          }`}
+        >
+          {activeSlide + 1}/{slides.length}
+        </div>
       </div>
     </div>
   );
