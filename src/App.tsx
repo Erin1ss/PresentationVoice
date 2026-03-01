@@ -80,6 +80,12 @@ function App() {
 
   return (
     <div className="h-screen w-screen overflow-hidden">
+      <div className="fixed inset-0 pointer-events-none z-10">
+        <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.45)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.45)_1px,transparent_1px)] [background-size:44px_44px]" />
+        <div className="ambient-orb ambient-orb-cyan absolute -top-24 left-[8%] h-72 w-72 rounded-full bg-[radial-gradient(circle,_rgba(59,209,255,0.22)_0%,_transparent_70%)]" />
+        <div className="ambient-orb ambient-orb-amber absolute bottom-[-8rem] right-[6%] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(255,180,84,0.16)_0%,_transparent_72%)]" />
+      </div>
+
       <div
         ref={containerRef}
         className="presentation-scroll h-full w-full overflow-y-scroll snap-y snap-mandatory relative"
@@ -91,12 +97,6 @@ function App() {
           height: `${100 / visualScale}%`
         }}
       >
-        <div className="fixed inset-0 pointer-events-none z-10">
-          <div className="absolute inset-0 opacity-[0.07] [background-image:linear-gradient(rgba(255,255,255,0.45)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.45)_1px,transparent_1px)] [background-size:44px_44px]" />
-          <div className="ambient-orb ambient-orb-cyan absolute -top-24 left-[8%] h-72 w-72 rounded-full bg-[radial-gradient(circle,_rgba(59,209,255,0.22)_0%,_transparent_70%)]" />
-          <div className="ambient-orb ambient-orb-amber absolute bottom-[-8rem] right-[6%] h-80 w-80 rounded-full bg-[radial-gradient(circle,_rgba(255,180,84,0.16)_0%,_transparent_72%)]" />
-        </div>
-
         {slides.map((SlideComponent, idx) => (
           <section
             key={idx}
