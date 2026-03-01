@@ -100,14 +100,14 @@ function App() {
             <SlideComponent />
           </section>
         ))}
+      </div>
 
-        <div
-          className={`fixed right-4 bottom-3 z-30 pointer-events-none select-none text-xs tracking-[0.12em] transition-opacity ${
-            showSlideNumber ? 'opacity-35 text-white' : 'opacity-0'
-          }`}
-        >
-          {activeSlide + 1}/{slides.length}
-        </div>
+      <div
+        className={`fixed right-4 bottom-3 z-40 pointer-events-none select-none text-xs tracking-[0.12em] transition-opacity ${
+          showSlideNumber ? 'opacity-35 text-white' : 'opacity-0'
+        }`}
+      >
+        {activeSlide + 1}/{slides.length}
       </div>
     </div>
   );
