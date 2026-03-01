@@ -6,8 +6,14 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showSlideNumber, setShowSlideNumber] = useState(false);
   const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+  const [mobileScale, setMobileScale] = useState(() => {
+    if (window.innerWidth > 768) return 1;
+    if (window.innerHeight <= 700) return 0.72;
+    if (window.innerHeight <= 820) return 0.82;
+    return 0.9;
+  });
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const visualScale = isMobile ? 1 : 1.5;
+  const visualScale = isMobile ? mobileScale : 1.5;
 
   const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8, Slide9, Slide10];
 
@@ -31,7 +37,22 @@ function App() {
   };
 
   useEffect(() => {
-    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    const onResize = () => {
+      const mobile = window.innerWidth <= 768;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setMobileScale(1);
+        return;
+      }
+
+      if (window.innerHeight <= 700) {
+        setMobileScale(0.72);
+      } else if (window.innerHeight <= 820) {
+        setMobileScale(0.82);
+      } else {
+        setMobileScale(0.9);
+      }
+    };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
