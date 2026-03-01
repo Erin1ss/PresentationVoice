@@ -5,8 +5,9 @@ import { Slide6, Slide7, Slide8, Slide9, Slide10 } from './slides/Part2';
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showSlideNumber, setShowSlideNumber] = useState(false);
+  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const visualScale = 1.5;
+  const visualScale = isMobile ? 1 : 1.5;
 
   const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8, Slide9, Slide10];
 
@@ -28,6 +29,12 @@ function App() {
     const clampedIndex = Math.max(0, Math.min(index, slides.length - 1));
     setActiveSlide(clampedIndex);
   };
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
