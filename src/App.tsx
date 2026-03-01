@@ -5,15 +5,11 @@ import { Slide6, Slide7, Slide8, Slide9, Slide10 } from './slides/Part2';
 function App() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [showSlideNumber, setShowSlideNumber] = useState(false);
-  const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
-  const [mobileScale, setMobileScale] = useState(() => {
-    if (window.innerWidth > 768) return 1;
-    if (window.innerHeight <= 700) return 0.72;
-    if (window.innerHeight <= 820) return 0.82;
-    return 0.9;
-  });
+  const [isMobileDevice, setIsMobileDevice] = useState(
+    () => Math.min(window.screen.width, window.screen.height) <= 768
+  );
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const visualScale = isMobile ? mobileScale : 1.5;
+  const visualScale = isMobileDevice ? 1 : 1.5;
 
   const slides = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8, Slide9, Slide10];
 
@@ -38,24 +34,22 @@ function App() {
 
   useEffect(() => {
     const onResize = () => {
-      const mobile = window.innerWidth <= 768;
-      setIsMobile(mobile);
-      if (!mobile) {
-        setMobileScale(1);
-        return;
-      }
-
-      if (window.innerHeight <= 700) {
-        setMobileScale(0.72);
-      } else if (window.innerHeight <= 820) {
-        setMobileScale(0.82);
-      } else {
-        setMobileScale(0.9);
-      }
+      setIsMobileDevice(Math.min(window.screen.width, window.screen.height) <= 768);
     };
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
   }, []);
+
+  useEffect(() => {
+    const viewport = document.querySelector('meta[name="viewport"]');
+    if (!viewport) return;
+
+    if (isMobileDevice) {
+      viewport.setAttribute('content', 'width=1200');
+    } else {
+      viewport.setAttribute('content', 'width=device-width, initial-scale=1.0');
+    }
+  }, [isMobileDevice]);
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
