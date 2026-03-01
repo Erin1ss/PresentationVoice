@@ -189,24 +189,25 @@ export const Slide8 = () => {
         <p className="slide-subtitle">Структура и связи модулей</p>
         <div className="accent-rule" />
 
-        <div className="mt-4 grid grid-cols-1 gap-2 md:flex md:items-center md:gap-2">
-          {summary.map((item, idx) => (
-            <React.Fragment key={item.label}>
-              <div className="rounded-xl border border-white/12 bg-black/20 px-3.5 py-2.5 md:flex-1">
-                <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-soft)]">{item.label}</p>
-                <p className="mt-1 text-sm font-semibold text-white">{item.value}</p>
-              </div>
-              {idx < summary.length - 1 && (
-                <div className="hidden md:flex items-center justify-center px-1">
-                  <ArrowRight className="h-3.5 w-3.5 text-[var(--color-accent-amber)]" />
+        <div className="lg:scale-95 lg:origin-top-left">
+          <div className="mt-4 grid grid-cols-1 gap-2 md:flex md:items-center md:gap-2">
+            {summary.map((item, idx) => (
+              <React.Fragment key={item.label}>
+                <div className="rounded-xl border border-white/12 bg-black/20 px-3.5 py-2.5 md:flex-1">
+                  <p className="text-[11px] uppercase tracking-[0.14em] text-[var(--color-text-soft)]">{item.label}</p>
+                  <p className="mt-1 text-sm font-semibold text-white">{item.value}</p>
                 </div>
-              )}
-            </React.Fragment>
-          ))}
-        </div>
+                {idx < summary.length - 1 && (
+                  <div className="hidden md:flex items-center justify-center px-1">
+                    <ArrowRight className="h-3.5 w-3.5 text-[var(--color-accent-amber)]" />
+                  </div>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
 
-        <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5 items-stretch">
-          <div className="glass-card overflow-hidden lg:col-span-5">
+          <div className="mt-4 grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-5 items-stretch">
+            <div className="glass-card overflow-hidden lg:col-span-5">
             <div className="px-4 py-2.5 border-b border-white/10 bg-black/35 flex items-center justify-between">
               <div className="flex items-center gap-2 text-xs text-[var(--color-text-soft)] font-[var(--font-mono)]">
                 <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
@@ -246,9 +247,9 @@ export const Slide8 = () => {
                 ))}
               </div>
             </div>
-          </div>
+            </div>
 
-          <div className="glass-card p-4 md:p-5 lg:col-span-7 relative overflow-hidden">
+            <div className="glass-card p-4 md:p-5 lg:col-span-7 relative overflow-hidden">
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(59,209,255,0.16)_0%,_transparent_68%)]" />
             <div className="relative">
               <div className="flex items-center justify-between gap-4 flex-wrap">
@@ -279,6 +280,7 @@ export const Slide8 = () => {
                 ))}
               </div>
             </div>
+            </div>
           </div>
         </div>
       </motion.div>
@@ -288,11 +290,11 @@ export const Slide8 = () => {
 
 export const Slide9 = () => {
   const roadmap = [
-    'Автоперевод на язык чата',
-    'Пунктуация и стилистическая правка',
-    'Потоковая расшифровка в реальном времени',
-    'Интеграция с CRM и helpdesk',
-    'Голосовые команды для сценариев'
+    'Перевод на другие языки',
+    'Пунктуация и исправление ошибок',
+    'Обработка аудио в реальном времени',
+    'Интеграция с Google Docs, Notion и корпоративными системами',
+    'Голосовые команды для автоматизации'
   ];
 
   return (
@@ -308,7 +310,7 @@ export const Slide9 = () => {
               <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Демо-результат</p>
               <h3 className="mt-3 text-2xl font-bold">Текст получен за ~7 секунд</h3>
               <p className="mt-3 text-[var(--color-text-soft)]">
-                Бот корректно распознает сообщение и возвращает готовый текст без внешнего API-задержки.
+                Бот корректно распознает сообщение и возвращает готовый текст без внешнего API.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
