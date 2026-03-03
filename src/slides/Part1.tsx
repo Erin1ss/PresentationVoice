@@ -167,13 +167,15 @@ export const Slide3 = () => {
         <div className="accent-rule" />
 
         <div className="mt-10 relative">
-          <motion.div
-            initial={{ opacity: 0, scaleX: 0 }}
-            whileInView={{ opacity: 0.6, scaleX: 1 }}
-            viewport={{ once: false, amount: 0.25 }}
-            transition={{ duration: 0.45, delay: 0.75, ease: 'easeOut' }}
-            className="absolute left-0 right-0 top-6 h-[2px] bg-gradient-to-r from-transparent via-[var(--color-accent-cyan)] to-transparent hidden md:block origin-left"
-          />
+          <div className="absolute left-0 right-0 top-6 hidden md:block overflow-hidden">
+            <motion.div
+              initial={{ opacity: 0, width: '0%' }}
+              whileInView={{ opacity: 0.6, width: '100%' }}
+              viewport={{ once: false, amount: 0.8 }}
+              transition={{ duration: 0.55, delay: 0.85, ease: 'easeOut' }}
+              className="h-[2px] bg-gradient-to-r from-transparent via-[var(--color-accent-cyan)] to-transparent"
+            />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5">
             {timeline.map((item, idx) => (
               <motion.div
@@ -318,6 +320,7 @@ export const Slide5 = () => {
     </div>
   );
 };
+
 
 
 
