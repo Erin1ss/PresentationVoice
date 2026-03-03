@@ -1,4 +1,4 @@
-п»їimport React from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import {
   ArrowDown,
@@ -20,25 +20,25 @@ import {
 const fadeUp = {
   initial: { opacity: 0, y: 26 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, amount: 0.35 },
+  viewport: { once: false, amount: 0.35 },
   transition: { duration: 0.65, ease: 'easeOut' }
 } as const;
 
 export const Slide6 = () => {
   const tools = [
-    { name: 'Python', sub: 'РЇРґСЂРѕ Р»РѕРіРёРєРё Р±РѕС‚Р°', icon: FileCode2 },
-    { name: 'Telegram Bot API', sub: 'РџСЂРёРµРј СЃРѕРѕР±С‰РµРЅРёР№', icon: Bot },
-    { name: 'FFmpeg', sub: 'РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ Р°СѓРґРёРѕ', icon: Radio },
-    { name: 'Whisper', sub: 'Р Р°СЃРїРѕР·РЅР°РІР°РЅРёРµ СЂРµС‡Рё', icon: Cpu },
-    { name: 'NumPy', sub: 'РћР±СЂР°Р±РѕС‚РєР° РјР°СЃСЃРёРІРѕРІ', icon: Workflow },
-    { name: 'Р›РѕРєР°Р»СЊРЅС‹Р№ Р·Р°РїСѓСЃРє', sub: 'Р‘РµР· РѕР±Р»Р°РєР° Рё Р·Р°РґРµСЂР¶РµРє', icon: Terminal }
+    { name: 'Python', sub: 'Ядро логики бота', icon: FileCode2 },
+    { name: 'Telegram Bot API', sub: 'Прием сообщений', icon: Bot },
+    { name: 'FFmpeg', sub: 'Преобразование аудио', icon: Radio },
+    { name: 'Whisper', sub: 'Распознавание речи', icon: Cpu },
+    { name: 'NumPy', sub: 'Обработка массивов', icon: Workflow },
+    { name: 'Локальный запуск', sub: 'Без облака и задержек', icon: Terminal }
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">РђСЂСЃРµРЅР°Р» РїСЂРѕРµРєС‚Р°</h2>
-        <p className="slide-subtitle">РўРµС…РЅРѕР»РѕРіРёС‡РµСЃРєРёР№ СЃС‚РµРє</p>
+        <h2 className="slide-title">Арсенал проекта</h2>
+        <p className="slide-subtitle">Технологический стек</p>
         <div className="accent-rule" />
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
@@ -47,7 +47,7 @@ export const Slide6 = () => {
               key={tool.name}
               initial={{ opacity: 0, scale: 0.94 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, amount: 0.25 }}
+              viewport={{ once: false, amount: 0.25 }}
               transition={{ duration: 0.42, delay: idx * 0.06 }}
               className="glass-card p-4 md:p-5"
             >
@@ -66,29 +66,29 @@ export const Slide6 = () => {
 
 export const Slide7 = () => {
   const route = [
-    { title: 'РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ', icon: Mic },
+    { title: 'Пользователь', icon: Mic },
     { title: 'Telegram', icon: Bot },
-    { title: 'РљРѕРЅРІРµСЂС‚РµСЂ .ogg -> .wav', icon: Workflow },
+    { title: 'Конвертер .ogg -> .wav', icon: Workflow },
     { title: 'Whisper', icon: Cpu },
-    { title: 'РўРµРєСЃС‚', icon: Code2 },
-    { title: 'РћС‚РІРµС‚', icon: CheckCircle2 }
+    { title: 'Текст', icon: Code2 },
+    { title: 'Ответ', icon: CheckCircle2 }
   ];
 
   const badges = [
-    { icon: ShieldCheck, text: 'РќР°РґРµР¶РЅРѕСЃС‚СЊ' },
-    { icon: Globe, text: 'РњСѓР»СЊС‚РёСЏР·С‹С‡РЅРѕСЃС‚СЊ' },
-    { icon: Zap, text: 'РњР°СЃС€С‚Р°Р±РёСЂСѓРµРјРѕСЃС‚СЊ' }
+    { icon: ShieldCheck, text: 'Надежность' },
+    { icon: Globe, text: 'Мультиязычность' },
+    { icon: Zap, text: 'Масштабируемость' }
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">РњР°СЂС€СЂСѓС‚ РіРѕР»РѕСЃРѕРІРѕРіРѕ СЃРѕРѕР±С‰РµРЅРёСЏ</h2>
-        <p className="slide-subtitle">РџРѕС‚РѕРє РґР°РЅРЅС‹С…</p>
+        <h2 className="slide-title">Маршрут голосового сообщения</h2>
+        <p className="slide-subtitle">Поток данных</p>
         <div className="accent-rule" />
 
         <div className="mt-8 rounded-2xl border border-white/12 bg-black/22 p-4 md:p-6">
-          <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-text-soft)]">РџСѓС‚СЊ РѕР±СЂР°Р±РѕС‚РєРё</p>
+          <p className="text-xs uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Путь обработки</p>
 
           <div className="mt-4 grid grid-cols-1 gap-2 md:hidden">
             {route.map((step, idx) => (
@@ -112,7 +112,7 @@ export const Slide7 = () => {
                 key={`tablet-${step.title}`}
                 initial={{ opacity: 0, y: 14 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
+                viewport={{ once: false, amount: 0.25 }}
                 transition={{ duration: 0.4, delay: idx * 0.06 }}
                 className="glass-card relative px-3 py-4 lg:px-4 lg:py-5 min-h-28 flex flex-col items-center justify-center text-center"
               >
@@ -128,7 +128,7 @@ export const Slide7 = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 12 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
+                  viewport={{ once: false, amount: 0.25 }}
                   transition={{ duration: 0.35, delay: idx * 0.05 }}
                   className="glass-card relative px-3 py-4 lg:px-4 lg:py-5 min-h-28 w-[148px] flex flex-col items-center justify-center text-center shrink-0"
                 >
@@ -162,31 +162,31 @@ export const Slide7 = () => {
 
 export const Slide8 = () => {
   const files = [
-    { name: '.env', icon: ShieldCheck, role: 'РўРѕРєРµРЅС‹ Рё СЃРµРєСЂРµС‚С‹' },
-    { name: 'config.py', icon: Workflow, role: 'РџР°СЂР°РјРµС‚СЂС‹ Рё РїСѓС‚Рё' },
-    { name: 'bot.py', icon: Bot, role: 'РўРѕС‡РєР° РІС…РѕРґР°', highlighted: true },
-    { name: 'audio_processor.py', icon: Radio, role: 'РќРѕСЂРјР°Р»РёР·Р°С†РёСЏ Р·РІСѓРєР°' },
-    { name: 'speech_recognizer.py', icon: Cpu, role: 'Р Р°СЃРїРѕР·РЅР°РІР°РЅРёРµ СЂРµС‡Рё' }
+    { name: '.env', icon: ShieldCheck, role: 'Токены и секреты' },
+    { name: 'config.py', icon: Workflow, role: 'Параметры и пути' },
+    { name: 'bot.py', icon: Bot, role: 'Точка входа', highlighted: true },
+    { name: 'audio_processor.py', icon: Radio, role: 'Нормализация звука' },
+    { name: 'speech_recognizer.py', icon: Cpu, role: 'Распознавание речи' }
   ];
 
   const summary = [
-    { label: 'Р’С…РѕРґ', value: '.ogg / .mp3' },
-    { label: 'РћР±СЂР°Р±РѕС‚РєР°', value: 'FFmpeg + Whisper' },
-    { label: 'Р’С‹С…РѕРґ', value: 'Р“РѕС‚РѕРІС‹Р№ С‚РµРєСЃС‚' }
+    { label: 'Вход', value: '.ogg / .mp3' },
+    { label: 'Обработка', value: 'FFmpeg + Whisper' },
+    { label: 'Выход', value: 'Готовый текст' }
   ];
 
   const flow = [
-    { name: 'РџРѕР»СѓС‡РµРЅРёРµ С„Р°Р№Р»Р°', icon: Bot, code: 'bot.py' },
-    { name: 'РљРѕРЅРІРµСЂС‚Р°С†РёСЏ Рё С‡РёСЃС‚РєР°', icon: Radio, code: 'audio_processor.py' },
-    { name: 'РўСЂР°РЅСЃРєСЂРёР±Р°С†РёСЏ', icon: Cpu, code: 'speech_recognizer.py' },
-    { name: 'РћС‚РїСЂР°РІРєР° СЂРµР·СѓР»СЊС‚Р°С‚Р°', icon: CheckCircle2, code: 'bot.py' }
+    { name: 'Получение файла', icon: Bot, code: 'bot.py' },
+    { name: 'Конвертация и чистка', icon: Radio, code: 'audio_processor.py' },
+    { name: 'Транскрибация', icon: Cpu, code: 'speech_recognizer.py' },
+    { name: 'Отправка результата', icon: CheckCircle2, code: 'bot.py' }
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">РђСЂС…РёС‚РµРєС‚СѓСЂР° РєРѕРґР°</h2>
-        <p className="slide-subtitle">РЎС‚СЂСѓРєС‚СѓСЂР° Рё СЃРІСЏР·Рё РјРѕРґСѓР»РµР№</p>
+        <h2 className="slide-title">Архитектура кода</h2>
+        <p className="slide-subtitle">Структура и связи модулей</p>
         <div className="accent-rule" />
 
         <div className="lg:scale-95 lg:origin-top-left">
@@ -218,7 +218,7 @@ export const Slide8 = () => {
             </div>
 
             <div className="p-3.5 md:p-4">
-              <p className="text-[0.72rem] uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Р”РµСЂРµРІРѕ РјРѕРґСѓР»РµР№</p>
+              <p className="text-[0.72rem] uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Дерево модулей</p>
               <div className="mt-3 space-y-2">
                 {files.map((file) => (
                   <div
@@ -253,9 +253,9 @@ export const Slide8 = () => {
             <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-[radial-gradient(circle,_rgba(59,209,255,0.16)_0%,_transparent_68%)]" />
             <div className="relative">
               <div className="flex items-center justify-between gap-4 flex-wrap">
-                <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">РЎС†РµРЅР°СЂРёР№ РѕР±СЂР°Р±РѕС‚РєРё</p>
+                <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Сценарий обработки</p>
                 <span className="rounded-full border border-white/15 px-2 py-0.5 text-[11px] text-[var(--color-text-soft)]">
-                  4 С€Р°РіР°
+                  4 шага
                 </span>
               </div>
 
@@ -290,37 +290,37 @@ export const Slide8 = () => {
 
 export const Slide9 = () => {
   const roadmap = [
-    'РџРµСЂРµРІРѕРґ РЅР° РґСЂСѓРіРёРµ СЏР·С‹РєРё',
-    'РџСѓРЅРєС‚СѓР°С†РёСЏ Рё РёСЃРїСЂР°РІР»РµРЅРёРµ РѕС€РёР±РѕРє',
-    'РћР±СЂР°Р±РѕС‚РєР° Р°СѓРґРёРѕ РІ СЂРµР°Р»СЊРЅРѕРј РІСЂРµРјРµРЅРё',
-    'РРЅС‚РµРіСЂР°С†РёСЏ СЃ Google Docs, Notion Рё РєРѕСЂРїРѕСЂР°С‚РёРІРЅС‹РјРё СЃРёСЃС‚РµРјР°РјРё',
-    'Р“РѕР»РѕСЃРѕРІС‹Рµ РєРѕРјР°РЅРґС‹ РґР»СЏ Р°РІС‚РѕРјР°С‚РёР·Р°С†РёРё'
+    'Перевод на другие языки',
+    'Пунктуация и исправление ошибок',
+    'Обработка аудио в реальном времени',
+    'Интеграция с Google Docs, Notion и корпоративными системами',
+    'Голосовые команды для автоматизации'
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">РСЃРїС‹С‚Р°РЅРёСЏ Рё РіРѕСЂРёР·РѕРЅС‚С‹</h2>
-        <p className="slide-subtitle">Р РµР·СѓР»СЊС‚Р°С‚С‹ Рё РґР°Р»СЊРЅРµР№С€РµРµ СЂР°Р·РІРёС‚РёРµ</p>
+        <h2 className="slide-title">Испытания и горизонты</h2>
+        <p className="slide-subtitle">Результаты и дальнейшее развитие</p>
         <div className="accent-rule" />
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-5 md:gap-7 items-stretch">
           <div className="glass-card p-5 md:p-7 flex flex-col justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Р”РµРјРѕ-СЂРµР·СѓР»СЊС‚Р°С‚</p>
-              <h3 className="mt-3 text-2xl font-bold">РўРµРєСЃС‚ РїРѕР»СѓС‡РµРЅ Р·Р° ~7 СЃРµРєСѓРЅРґ</h3>
+              <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Демо-результат</p>
+              <h3 className="mt-3 text-2xl font-bold">Текст получен за ~7 секунд</h3>
               <p className="mt-3 text-[var(--color-text-soft)]">
-                Р‘РѕС‚ РєРѕСЂСЂРµРєС‚РЅРѕ СЂР°СЃРїРѕР·РЅР°РµС‚ СЃРѕРѕР±С‰РµРЅРёРµ Рё РІРѕР·РІСЂР°С‰Р°РµС‚ РіРѕС‚РѕРІС‹Р№ С‚РµРєСЃС‚ Р±РµР· РІРЅРµС€РЅРµРіРѕ API.
+                Бот корректно распознает сообщение и возвращает готовый текст без внешнего API.
               </p>
             </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <span className="chip">Р’СЂРµРјСЏ РѕС‚РІРµС‚Р°: 7 СЃ</span>
-              <span className="chip">РЎС‚Р°Р±РёР»СЊРЅР°СЏ С‚РѕС‡РЅРѕСЃС‚СЊ</span>
+              <span className="chip">Время ответа: 7 с</span>
+              <span className="chip">Стабильная точность</span>
             </div>
           </div>
 
           <div className="glass-card p-5 md:p-7">
-            <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">РЎР»РµРґСѓСЋС‰РёР№ СЌС‚Р°Рї</p>
+            <p className="text-sm uppercase tracking-[0.16em] text-[var(--color-text-soft)]">Следующий этап</p>
             <ul className="mt-4 space-y-3">
               {roadmap.map((item) => (
                 <li key={item} className="flex items-start gap-3">
@@ -337,7 +337,7 @@ export const Slide9 = () => {
 };
 
 export const Slide10 = () => {
-  const points = ['РџСЂРёРЅС†РёРїС‹ РёР·СѓС‡РµРЅС‹', 'Whisper РёСЃСЃР»РµРґРѕРІР°РЅ', 'Р Р°Р±РѕС‡РёР№ РїСЂРѕС‚РѕС‚РёРї СЃРѕР±СЂР°РЅ', 'Р¦РµР»СЊ РїСЂРѕРµРєС‚Р° РґРѕСЃС‚РёРіРЅСѓС‚Р°'];
+  const points = ['Принципы изучены', 'Whisper исследован', 'Рабочий прототип собран', 'Цель проекта достигнута'];
 
   return (
     <div className="slide-shell overflow-hidden text-center items-center">
@@ -345,8 +345,8 @@ export const Slide10 = () => {
       <div className="absolute inset-0 bg-gradient-to-t from-[#050b17] via-[#050b17]/80 to-[#050b17]/45" />
 
       <motion.div {...fadeUp} className="relative z-10 slide-inner max-w-4xl">
-        <h2 className="text-[clamp(2rem,6vw,5.2rem)] font-extrabold uppercase leading-[0.96]">Р“РёРїРѕС‚РµР·Р° РїРѕРґС‚РІРµСЂР¶РґРµРЅР°</h2>
-        <p className="slide-subtitle">РС‚РѕРі РїСЂРѕРµРєС‚Р°</p>
+        <h2 className="text-[clamp(2rem,6vw,5.2rem)] font-extrabold uppercase leading-[0.96]">Гипотеза подтверждена</h2>
+        <p className="slide-subtitle">Итог проекта</p>
         <div className="accent-rule mx-auto" />
 
         <div className="mt-8 md:mt-10 grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
@@ -355,7 +355,7 @@ export const Slide10 = () => {
               key={point}
               initial={{ opacity: 0, y: 14 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: false, amount: 0.2 }}
               transition={{ duration: 0.4, delay: idx * 0.08 }}
               className="glass-card p-4"
             >
@@ -366,7 +366,7 @@ export const Slide10 = () => {
         </div>
 
         <p className="mt-10 md:mt-12 text-[var(--color-text-soft)] tracking-[0.26em] uppercase text-xs md:text-sm">
-          РЎРїР°СЃРёР±Рѕ Р·Р° РІРЅРёРјР°РЅРёРµ
+          Спасибо за внимание
         </p>
       </motion.div>
     </div>
