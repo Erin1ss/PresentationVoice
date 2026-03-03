@@ -1,4 +1,4 @@
-import React from 'react';
+п»їimport React from 'react';
 import { motion } from 'framer-motion';
 import { Activity, Cpu, FileText, Globe, Languages, Mic, Volume2, VolumeX, Waves } from 'lucide-react';
 
@@ -38,19 +38,19 @@ export const Slide1 = () => {
       <motion.div {...fadeUp} className="relative z-10 slide-inner h-full flex flex-col py-1">
         <div className="text-center">
           <p className="text-[#eaf3ff] text-[0.82rem] md:text-[1.8rem] leading-snug tracking-[0.01em]">
-            МБОУ &quot;Гимназия 122 имени Ж.А.Зайцевой&quot;
+            РњР‘РћРЈ &quot;Р“РёРјРЅР°Р·РёСЏ 122 РёРјРµРЅРё Р–.Рђ.Р—Р°Р№С†РµРІРѕР№&quot;
           </p>
           <p className="mt-1 text-[#c8d9ef] text-[0.8rem] md:text-[1.65rem] leading-snug">
-            Московского района г. Казань
+            РњРѕСЃРєРѕРІСЃРєРѕРіРѕ СЂР°Р№РѕРЅР° Рі. РљР°Р·Р°РЅСЊ
           </p>
         </div>
 
         <div className="flex-1 flex items-center justify-center">
           <div className="max-w-5xl text-center">
             <h1 className="text-[clamp(2.3rem,7vw,6.4rem)] font-extrabold leading-[0.94] tracking-[0.02em] text-[#f5fbff] drop-shadow-[0_7px_22px_rgba(0,0,0,0.5)]">
-              Голос,
+              Р“РѕР»РѕСЃ,
               <br />
-              превращенный в данные
+              РїСЂРµРІСЂР°С‰РµРЅРЅС‹Р№ РІ РґР°РЅРЅС‹Рµ
             </h1>
             <div className="mx-auto mt-10 h-[3px] w-[min(65vw,460px)] bg-gradient-to-r from-[#7de0ff] via-[var(--color-accent-cyan)] to-[#ffd09a] shadow-[0_0_24px_rgba(59,209,255,0.5)]" />
           </div>
@@ -62,10 +62,10 @@ export const Slide1 = () => {
         <div className="mx-auto w-full max-w-5xl">
           <div className="w-fit ml-auto xl:translate-x-1/2 text-right max-w-[620px]">
           <p className="text-[#79d2ff] font-semibold text-[clamp(0.86rem,1.2vw,1.5rem)] leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            Выполнил: Салахов Эрик, ученик 8А класса
+            Р’С‹РїРѕР»РЅРёР»: РЎР°Р»Р°С…РѕРІ Р­СЂРёРє, СѓС‡РµРЅРёРє 8Рђ РєР»Р°СЃСЃР°
           </p>
           <p className="mt-2 text-[#a8deff] font-semibold text-[clamp(0.86rem,1.2vw,1.5rem)] leading-snug drop-shadow-[0_2px_10px_rgba(0,0,0,0.35)]">
-            Руководитель: Хадиева Альбина Виленовна
+            Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ: РҐР°РґРёРµРІР° РђР»СЊР±РёРЅР° Р’РёР»РµРЅРѕРІРЅР°
           </p>
           </div>
         </div>
@@ -78,8 +78,8 @@ export const Slide2 = () => {
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="relative z-10 slide-inner max-w-6xl">
-        <h2 className="slide-title">Гипотеза, цель и задачи</h2>
-        <p className="slide-subtitle">Основа исследования</p>
+        <h2 className="slide-title">Р“РёРїРѕС‚РµР·Р°, С†РµР»СЊ Рё Р·Р°РґР°С‡Рё</h2>
+        <p className="slide-subtitle">РћСЃРЅРѕРІР° РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ</p>
         <div className="accent-rule" />
 
         <div className="mt-8 glass-card p-4 md:p-6 border-white/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.06),rgba(255,255,255,0.015))]">
@@ -92,10 +92,10 @@ export const Slide2 = () => {
               className="rounded-2xl border border-[rgba(59,209,255,0.4)] bg-[linear-gradient(160deg,rgba(59,209,255,0.16),rgba(7,16,34,0.58))] p-6 md:p-8 relative overflow-hidden"
             >
               <div className="absolute left-0 top-0 h-full w-1.5 bg-[var(--color-accent-cyan)]/90" />
-              <h3 className="text-xl md:text-3xl font-bold text-[var(--color-accent-cyan)]">Гипотеза</h3>
+              <h3 className="text-xl md:text-3xl font-bold text-[var(--color-accent-cyan)]">Р“РёРїРѕС‚РµР·Р°</h3>
               <p className="mt-4 text-base md:text-[1.18rem] leading-relaxed text-white max-w-5xl">
-                Технологии распознавания речи могут быть успешно применены в мессенджерах для быстрого и удобного
-                получения текстовой информации из голосовых сообщений.
+                РўРµС…РЅРѕР»РѕРіРёРё СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ СЂРµС‡Рё РјРѕРіСѓС‚ Р±С‹С‚СЊ СѓСЃРїРµС€РЅРѕ РїСЂРёРјРµРЅРµРЅС‹ РІ РјРµСЃСЃРµРЅРґР¶РµСЂР°С… РґР»СЏ Р±С‹СЃС‚СЂРѕРіРѕ Рё СѓРґРѕР±РЅРѕРіРѕ
+                РїРѕР»СѓС‡РµРЅРёСЏ С‚РµРєСЃС‚РѕРІРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РёР· РіРѕР»РѕСЃРѕРІС‹С… СЃРѕРѕР±С‰РµРЅРёР№.
               </p>
             </motion.article>
 
@@ -109,10 +109,10 @@ export const Slide2 = () => {
               >
                 <div className="absolute left-0 top-0 h-full w-1.5 bg-[var(--color-accent-amber)]/90" />
                 <div>
-                  <h3 className="text-xl md:text-2xl font-bold text-[var(--color-accent-amber)]">Цель исследования</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-[var(--color-accent-amber)]">Р¦РµР»СЊ РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ</h3>
                   <p className="mt-4 text-base md:text-lg leading-relaxed text-white">
-                    Изучить процесс преобразования голосовой речи в текст и создать простой проект, демонстрирующий работу
-                    этой технологии.
+                    РР·СѓС‡РёС‚СЊ РїСЂРѕС†РµСЃСЃ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РіРѕР»РѕСЃРѕРІРѕР№ СЂРµС‡Рё РІ С‚РµРєСЃС‚ Рё СЃРѕР·РґР°С‚СЊ РїСЂРѕСЃС‚РѕР№ РїСЂРѕРµРєС‚, РґРµРјРѕРЅСЃС‚СЂРёСЂСѓСЋС‰РёР№ СЂР°Р±РѕС‚Сѓ
+                    СЌС‚РѕР№ С‚РµС…РЅРѕР»РѕРіРёРё.
                   </p>
                 </div>
               </motion.article>
@@ -124,23 +124,23 @@ export const Slide2 = () => {
                 transition={{ duration: 0.45, delay: 0.16 }}
                 className="lg:col-span-8 rounded-2xl border border-white/20 bg-[linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] p-5 md:p-6"
               >
-                <h3 className="text-xl md:text-2xl font-bold text-white">Задачи исследования</h3>
+                <h3 className="text-xl md:text-2xl font-bold text-white">Р—Р°РґР°С‡Рё РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ</h3>
                 <ol className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-sm md:text-base text-white/90 list-none pl-0">
                   <li className="rounded-xl border border-white/12 bg-black/20 px-3 py-3 flex items-start gap-3">
                     <span className="text-[var(--color-accent-cyan)] font-semibold shrink-0">1.</span>
-                    <span>Изучить принципы работы технологий распознавания речи.</span>
+                    <span>РР·СѓС‡РёС‚СЊ РїСЂРёРЅС†РёРїС‹ СЂР°Р±РѕС‚С‹ С‚РµС…РЅРѕР»РѕРіРёР№ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ СЂРµС‡Рё.</span>
                   </li>
                   <li className="rounded-xl border border-white/12 bg-black/20 px-3 py-3 flex items-start gap-3">
                     <span className="text-[var(--color-accent-cyan)] font-semibold shrink-0">2.</span>
-                    <span>Рассмотреть возможности модели Whisper для преобразования голоса в текст.</span>
+                    <span>Р Р°СЃСЃРјРѕС‚СЂРµС‚СЊ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё РјРѕРґРµР»Рё Whisper РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РіРѕР»РѕСЃР° РІ С‚РµРєСЃС‚.</span>
                   </li>
                   <li className="rounded-xl border border-white/12 bg-black/20 px-3 py-3 flex items-start gap-3">
                     <span className="text-[var(--color-accent-cyan)] font-semibold shrink-0">3.</span>
-                    <span>Разработать Telegram-бота для распознавания голосовых сообщений.</span>
+                    <span>Р Р°Р·СЂР°Р±РѕС‚Р°С‚СЊ Telegram-Р±РѕС‚Р° РґР»СЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ РіРѕР»РѕСЃРѕРІС‹С… СЃРѕРѕР±С‰РµРЅРёР№.</span>
                   </li>
                   <li className="rounded-xl border border-white/12 bg-black/20 px-3 py-3 flex items-start gap-3">
                     <span className="text-[var(--color-accent-cyan)] font-semibold shrink-0">4.</span>
-                    <span>Проверить точность и удобство работы созданного решения.</span>
+                    <span>РџСЂРѕРІРµСЂРёС‚СЊ С‚РѕС‡РЅРѕСЃС‚СЊ Рё СѓРґРѕР±СЃС‚РІРѕ СЂР°Р±РѕС‚С‹ СЃРѕР·РґР°РЅРЅРѕРіРѕ СЂРµС€РµРЅРёСЏ.</span>
                   </li>
                 </ol>
               </motion.article>
@@ -154,16 +154,16 @@ export const Slide2 = () => {
 
 export const Slide3 = () => {
   const timeline = [
-    { year: '1970-1980-е', title: 'Статистические модели', text: 'Распознавание словарных наборов' },
-    { year: '2000-е', title: 'Deep Learning', text: 'Резкий рост точности моделей' },
-    { year: '2026', title: 'Whisper', text: 'Устойчивость к шуму и многоязычность' }
+    { year: '1970-1980-Рµ', title: 'РЎС‚Р°С‚РёСЃС‚РёС‡РµСЃРєРёРµ РјРѕРґРµР»Рё', text: 'Р Р°СЃРїРѕР·РЅР°РІР°РЅРёРµ СЃР»РѕРІР°СЂРЅС‹С… РЅР°Р±РѕСЂРѕРІ' },
+    { year: '2000-Рµ', title: 'Deep Learning', text: 'Р РµР·РєРёР№ СЂРѕСЃС‚ С‚РѕС‡РЅРѕСЃС‚Рё РјРѕРґРµР»РµР№' },
+    { year: '2026', title: 'Whisper', text: 'РЈСЃС‚РѕР№С‡РёРІРѕСЃС‚СЊ Рє С€СѓРјСѓ Рё РјРЅРѕРіРѕСЏР·С‹С‡РЅРѕСЃС‚СЊ' }
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">Эволюция распознавания речи</h2>
-        <p className="slide-subtitle">Ключевые этапы</p>
+        <h2 className="slide-title">Р­РІРѕР»СЋС†РёСЏ СЂР°СЃРїРѕР·РЅР°РІР°РЅРёСЏ СЂРµС‡Рё</h2>
+        <p className="slide-subtitle">РљР»СЋС‡РµРІС‹Рµ СЌС‚Р°РїС‹</p>
         <div className="accent-rule" />
 
         <div className="mt-10 relative">
@@ -193,18 +193,18 @@ export const Slide3 = () => {
 
 export const Slide4 = () => {
   const steps = [
-    { title: 'Запись', sub: 'Голос превращается в аудиосигнал', icon: Mic },
-    { title: 'Очистка', sub: 'Подавление шума и нормализация', icon: VolumeX },
-    { title: 'Признаки', sub: 'Извлечение спектральных параметров', icon: Activity },
-    { title: 'Модель', sub: 'Whisper строит текстовую гипотезу', icon: Cpu },
-    { title: 'Результат', sub: 'Готовый текст для пользователя', icon: FileText }
+    { title: 'Р—Р°РїРёСЃСЊ', sub: 'Р“РѕР»РѕСЃ РїСЂРµРІСЂР°С‰Р°РµС‚СЃСЏ РІ Р°СѓРґРёРѕСЃРёРіРЅР°Р»', icon: Mic },
+    { title: 'РћС‡РёСЃС‚РєР°', sub: 'РџРѕРґР°РІР»РµРЅРёРµ С€СѓРјР° Рё РЅРѕСЂРјР°Р»РёР·Р°С†РёСЏ', icon: VolumeX },
+    { title: 'РџСЂРёР·РЅР°РєРё', sub: 'РР·РІР»РµС‡РµРЅРёРµ СЃРїРµРєС‚СЂР°Р»СЊРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ', icon: Activity },
+    { title: 'РњРѕРґРµР»СЊ', sub: 'Whisper СЃС‚СЂРѕРёС‚ С‚РµРєСЃС‚РѕРІСѓСЋ РіРёРїРѕС‚РµР·Сѓ', icon: Cpu },
+    { title: 'Р РµР·СѓР»СЊС‚Р°С‚', sub: 'Р“РѕС‚РѕРІС‹Р№ С‚РµРєСЃС‚ РґР»СЏ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ', icon: FileText }
   ];
 
   return (
     <div className="slide-shell">
       <motion.div {...fadeUp} className="slide-inner">
-        <h2 className="slide-title">Анатомия преобразования</h2>
-        <p className="slide-subtitle">От микрофона до текста</p>
+        <h2 className="slide-title">РђРЅР°С‚РѕРјРёСЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ</h2>
+        <p className="slide-subtitle">РћС‚ РјРёРєСЂРѕС„РѕРЅР° РґРѕ С‚РµРєСЃС‚Р°</p>
         <div className="accent-rule" />
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 md:gap-4">
@@ -234,16 +234,16 @@ export const Slide4 = () => {
 
 export const Slide5 = () => {
   const flow = [
-    { icon: Mic, title: 'Голос' },
+    { icon: Mic, title: 'Р“РѕР»РѕСЃ' },
     { icon: Cpu, title: 'Whisper' },
-    { icon: FileText, title: 'Текст' }
+    { icon: FileText, title: 'РўРµРєСЃС‚' }
   ];
 
   const strengths = [
-    { icon: Globe, label: 'Языки' },
-    { icon: Volume2, label: 'Шум' },
-    { icon: Languages, label: 'Перевод' },
-    { icon: Waves, label: 'Естественная речь' }
+    { icon: Globe, label: 'РЇР·С‹РєРё' },
+    { icon: Volume2, label: 'РЁСѓРј' },
+    { icon: Languages, label: 'РџРµСЂРµРІРѕРґ' },
+    { icon: Waves, label: 'Р•СЃС‚РµСЃС‚РІРµРЅРЅР°СЏ СЂРµС‡СЊ' }
   ];
 
   return (
@@ -251,8 +251,8 @@ export const Slide5 = () => {
       <motion.div {...fadeUp} className="slide-inner">
         <div className="glass-card p-6 md:p-8 relative overflow-hidden">
           <div className="absolute -top-20 -right-20 h-44 w-44 rounded-full bg-[radial-gradient(circle,_rgba(59,209,255,0.25)_0%,_transparent_68%)]" />
-          <h2 className="slide-title">Whisper от OpenAI</h2>
-          <p className="slide-subtitle">ASR-ядро проекта</p>
+          <h2 className="slide-title">Whisper РѕС‚ OpenAI</h2>
+          <p className="slide-subtitle">ASR-СЏРґСЂРѕ РїСЂРѕРµРєС‚Р°</p>
           <div className="accent-rule" />
 
           <div className="mt-7 rounded-xl border border-white/12 bg-black/28 p-5 md:p-6 relative overflow-hidden">
@@ -260,7 +260,7 @@ export const Slide5 = () => {
             <div className="h-14 w-full max-w-[300px] mx-auto rounded-lg border border-white/10 bg-black/25 px-3 flex items-center justify-center shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
               <OpenAILogo />
             </div>
-            <p className="mt-4 text-center text-base md:text-lg text-white/95">Голос -&gt; текст</p>
+            <p className="mt-4 text-center text-base md:text-lg text-white/95">Р“РѕР»РѕСЃ -&gt; С‚РµРєСЃС‚</p>
 
             <div className="mt-5 grid grid-cols-1 sm:grid-cols-3 gap-3">
               {flow.map((item, idx) => (
@@ -283,7 +283,7 @@ export const Slide5 = () => {
             <div className="mt-3 flex justify-center">
               <span className="chip">
                 <Activity className="h-3.5 w-3.5" />
-                Быстро и точно
+                Р‘С‹СЃС‚СЂРѕ Рё С‚РѕС‡РЅРѕ
               </span>
             </div>
           </div>
@@ -312,3 +312,4 @@ export const Slide5 = () => {
     </div>
   );
 };
+
