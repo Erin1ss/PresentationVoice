@@ -28,7 +28,7 @@ export const Slide6 = () => {
   const tools = [
     { name: 'Python', sub: 'Ядро логики бота', icon: FileCode2 },
     { name: 'Telegram Bot API', sub: 'Прием сообщений', icon: Bot },
-    { name: 'FFmpeg', sub: 'Преобразование аудио', icon: Radio },
+    { name: 'python-telegram-bot', sub: 'Поддержка асинхронной обработки сообщений', icon: Bot },
     { name: 'Whisper', sub: 'Распознавание речи', icon: Cpu },
     { name: 'NumPy', sub: 'Обработка массивов', icon: Workflow },
     { name: 'Локальный запуск', sub: 'Без облака и задержек', icon: Terminal }
@@ -290,11 +290,11 @@ export const Slide8 = () => {
 
 export const Slide9 = () => {
   const roadmap = [
-    'Перевод на другие языки',
-    'Пунктуация и исправление ошибок',
+    'Автоматический перевод',
+    'Улучшенная пунктуация',
     'Обработка аудио в реальном времени',
-    'Интеграция с Google Docs, Notion и корпоративными системами',
-    'Голосовые команды для автоматизации'
+    'Интеграция с сервисами вроде Google Docs или Notion',
+    'Голосовые команды для автоматизации задач'
   ];
 
   return (
